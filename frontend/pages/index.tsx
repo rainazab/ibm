@@ -3,10 +3,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import styles from '../styles/home.module.css';
 
-// Change this to your live backend URL after deploying to Fly.io
-// Local: 'http://localhost:3001'
-// Live: 'https://beacon-backend.fly.dev'
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://beacon-backend.fly.dev';
 
 interface Strategy {
   strategy?: string;
