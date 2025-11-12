@@ -3,6 +3,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
 import { OpenAI } from 'openai';
+import stripeRoutes from './stripe-routes';
+import userRoutes from './user-routes';
 
 dotenv.config();
 
@@ -273,6 +275,10 @@ app.get('/api/users/:userId/negotiations', (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to get negotiations' });
   }
 });
+
+// Routes
+app.use('/api/stripe', stripeRoutes);
+app.use('/api/users', userRoutes);
 
 // Health check
 app.get('/health', (req: Request, res: Response) => {
