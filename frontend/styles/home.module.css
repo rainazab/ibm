@@ -885,33 +885,137 @@
 }
 
 /* ============ RESPONSIVE ============ */
-@media (max-width: 768px) {
-  .navLinks {
-    gap: 1.25rem;
+@media (max-width: 1024px) {
+  .hero {
+    gap: 2.5rem;
+    padding: 4rem 2rem;
   }
 
   .title {
-    font-size: 2.2rem;
+    font-size: 3rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.5rem;
+  }
+
+  .stepsGrid, .featuresGrid, .pricingGrid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.5rem 0;
+  }
+
+  .navContent {
+    padding: 0 1rem;
+  }
+
+  .navLogo {
+    font-size: 1.5rem;
+    margin-left: -1rem;
+  }
+
+  .navLinks {
+    gap: 0.75rem;
+  }
+
+  .navLinks a {
+    font-size: 0.85rem;
+  }
+
+  .btnSmall, .btnPrimarySmall {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    min-height: auto;
+    padding-top: calc(3rem + 3rem);
+  }
+
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
   }
 
   .subtitle {
-    font-size: 1.05rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .animatedLogo {
+    font-size: 2rem;
+    height: 60px;
+    margin-bottom: 1rem;
   }
 
   .heroCTA {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .btnLarge, .btnOutlineLarge {
     width: 100%;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .heroAnimation {
+    height: 300px;
+    margin-top: 1.5rem;
+  }
+
+  .floatingCard {
+    height: 220px;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .section {
+    padding: 4rem 1.5rem;
   }
 
   .sectionTitle {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
   }
 
   .stepsGrid, .featuresGrid, .pricingGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .step, .featureCard {
+    padding: 1.75rem;
+  }
+
+  .stepNumber {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+
+  .step h3, .featureCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .step p, .featureCard p {
+    font-size: 0.9rem;
+  }
+
+  .priceCard {
+    padding: 2rem;
   }
 
   .priceCardFeatured {
@@ -922,17 +1026,290 @@
     transform: translateY(-12px);
   }
 
-  .footerBottom {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
+  .priceCard h3 {
+    font-size: 1.3rem;
   }
 
-  .animatedLogo {
-    font-size: 2.5rem;
+  .price {
+    font-size: 2.2rem;
+  }
+
+  .priceFeatures li {
+    font-size: 0.9rem;
+    padding: 0.6rem 0;
+  }
+
+  .btnPrimary, .btnSecondary {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+  }
+
+  .ctaSection {
+    padding: 4rem 1.5rem;
   }
 
   .ctaSection h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .ctaSection p {
+    font-size: 1.1rem;
+  }
+
+  .ctaSection .btnLarge {
+    width: 100%;
+  }
+
+  .footer {
+    padding: 3rem 1.5rem 1rem;
+  }
+
+  .footerContent {
+    gap: 2rem;
+  }
+
+  .footerSection h4 {
+    font-size: 1rem;
+  }
+
+  .footerSection p, .footerSection a {
+    font-size: 0.85rem;
+  }
+
+  .appBadge {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.9rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .socialLinks {
+    gap: 1.25rem;
+  }
+
+  .socialLinks a {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0.4rem 0;
+  }
+
+  .navContent {
+    padding: 0 0.75rem;
+  }
+
+  .navLogo {
+    font-size: 1.2rem;
+    margin-left: -0.75rem;
+  }
+
+  .navLinks {
+    gap: 0.5rem;
+  }
+
+  .navLinks a {
+    font-size: 0.75rem;
+  }
+
+  .btnSmall, .btnPrimarySmall {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+    padding-top: calc(2rem + 2.5rem);
+  }
+
+  .title {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+
+  .animatedLogo {
+    font-size: 1.5rem;
+    height: 50px;
+    margin-bottom: 0.75rem;
+  }
+
+  .socialProof {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .heroCTA {
+    gap: 0.75rem;
+  }
+
+  .btnLarge, .btnOutlineLarge {
+    padding: 0.8rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .heroAnimation {
+    height: 250px;
+  }
+
+  .floatingCard {
+    height: 180px;
+    padding: 1rem;
+  }
+
+  .badge {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.75rem;
+  }
+
+  .callResult p {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+  }
+
+  .callResult p strong {
+    font-size: 1.6rem;
+  }
+
+  .callResult p.small {
+    font-size: 0.85rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stepsGrid, .featuresGrid, .pricingGrid {
+    gap: 1rem;
+  }
+
+  .step, .featureCard {
+    padding: 1.25rem;
+  }
+
+  .stepNumber {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .step h3, .featureCard h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .step p, .featureCard p {
+    font-size: 0.85rem;
+  }
+
+  .featureIcon {
+    font-size: 2.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .priceCard {
+    padding: 1.5rem;
+  }
+
+  .priceCard h3 {
+    font-size: 1.1rem;
+  }
+
+  .price {
     font-size: 2rem;
+  }
+
+  .priceMonth {
+    font-size: 0.95rem;
+  }
+
+  .priceFeatures {
+    margin: 1rem 0;
+  }
+
+  .priceFeatures li {
+    font-size: 0.8rem;
+    padding: 0.5rem 0;
+  }
+
+  .btnPrimary, .btnSecondary {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+
+  .ctaSection {
+    padding: 3rem 1rem;
+  }
+
+  .ctaSection h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ctaSection p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ctaSection .btnLarge {
+    padding: 0.8rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    padding: 2rem 1rem 0.75rem;
+  }
+
+  .footerContent {
+    gap: 1.5rem;
+  }
+
+  .footerSection h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .footerSection p, .footerSection a {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .appBadge {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .footerBottom {
+    gap: 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .socialLinks {
+    gap: 1rem;
+  }
+
+  .socialLinks a {
+    font-size: 1rem;
   }
 }
