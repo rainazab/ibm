@@ -8,6 +8,8 @@ yarn.lock
 .env
 .env.local
 .env.*.local
+.env.save
+backend/.env.save
 
 # Build
 dist/
