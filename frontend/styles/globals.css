@@ -1,5 +1,7 @@
-/* DELVEN.APP - PROFESSIONAL COLOR SCHEME */
-/* Primary: Deep Teal (#0B5B5B), Secondary: Vibrant Coral (#FF6B5B), Accent: Gold (#FFD700) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* DELVEN.APP - PREMIUM VIBRANT COLOR SCHEME */
+/* Primary: Vibrant Blue (#0066FF), Secondary: Vibrant Yellow (#FFD60A), Accent: Electric Blue (#0099FF) */
 
 * {
   margin: 0;
@@ -8,22 +10,22 @@
 }
 
 :root {
-  /* Color Palette */
-  --primary: #0B5B5B;
-  --primary-light: #0D7C7C;
-  --primary-dark: #063838;
-  --secondary: #FF6B5B;
-  --secondary-light: #FF8B7B;
-  --accent: #FFD700;
-  --accent-light: #FFE135;
-  --text-dark: #1A1A1A;
-  --text-light: #666666;
-  --bg-light: #F8FAFB;
+  /* Premium Color Palette - Vibrant Blue & Yellow */
+  --primary: #0066FF;
+  --primary-light: #3385FF;
+  --primary-dark: #0052CC;
+  --secondary: #FFD60A;
+  --secondary-light: #FFE066;
+  --accent: #0099FF;
+  --accent-light: #33B1FF;
+  --text-dark: #0A0E27;
+  --text-light: #5A5F7E;
+  --bg-light: #F5F8FF;
   --bg-white: #FFFFFF;
-  --border: #E8EAED;
-  --success: #10B981;
-  --error: #EF4444;
-  --warning: #F59E0B;
+  --border: #DDE4FF;
+  --success: #00D084;
+  --error: #FF3333;
+  --warning: #FFB200;
   
   /* Spacing */
   --space-xs: 0.5rem;
@@ -34,7 +36,7 @@
   --space-2xl: 4rem;
   
   /* Typography */
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
@@ -50,10 +52,10 @@
   --radius-xl: 1.5rem;
   
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
-  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 2px rgba(0, 102, 255, 0.05);
+  --shadow-md: 0 8px 16px rgba(0, 102, 255, 0.1);
+  --shadow-lg: 0 16px 32px rgba(0, 102, 255, 0.15);
+  --shadow-xl: 0 24px 48px rgba(0, 102, 255, 0.2);
 }
 
 html {
@@ -63,15 +65,16 @@ html {
 body {
   font-family: var(--font-family);
   color: var(--text-dark);
-  background: var(--bg-light);
+  background: #F5F8FF;
   line-height: 1.6;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.005em;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
+  color: var(--text-dark);
 }
 
 h1 {
@@ -94,11 +97,12 @@ p {
 a {
   color: var(--primary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 a:hover {
-  color: var(--secondary);
+  color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* Buttons */
@@ -109,45 +113,60 @@ a:hover {
   gap: var(--space-xs);
   padding: var(--space-sm) var(--space-lg);
   font-size: var(--font-size-base);
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   border-radius: var(--radius-lg);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-decoration: none;
+  font-family: var(--font-family);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   color: white;
   box-shadow: var(--shadow-md);
+  border: none;
 }
 
 .btn-primary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 102, 255, 0.3);
+}
+
+.btn-primary:active {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
 }
 
 .btn-secondary {
   background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
-  color: white;
+  color: #0A0E27;
   box-shadow: var(--shadow-md);
+  border: none;
+  font-weight: 700;
 }
 
 .btn-secondary:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(255, 214, 10, 0.3);
+}
+
+.btn-secondary:active {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
 }
 
 .btn-outline {
   background: transparent;
   color: var(--primary);
-  border: 2px solid var(--primary);
+  border: 2.5px solid var(--primary);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-outline:hover {
   background: var(--primary);
   color: white;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
 }
 
 .btn-small {
@@ -168,13 +187,16 @@ input, textarea, select {
   border-radius: var(--radius-md);
   font-family: var(--font-family);
   font-size: var(--font-size-base);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
+  background: white;
+  color: var(--text-dark);
 }
 
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(11, 91, 91, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 textarea {
@@ -189,7 +211,7 @@ textarea {
 .form-group label {
   display: block;
   margin-bottom: var(--space-sm);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-dark);
 }
 
@@ -197,6 +219,7 @@ textarea {
   color: var(--error);
   font-size: var(--font-size-sm);
   margin-top: var(--space-xs);
+  font-weight: 500;
 }
 
 /* Container */
@@ -238,7 +261,7 @@ textarea {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
   to {
     opacity: 1;
@@ -249,7 +272,7 @@ textarea {
 @keyframes slideInFromLeft {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-24px);
   }
   to {
     opacity: 1;
@@ -260,7 +283,7 @@ textarea {
 @keyframes slideInFromRight {
   from {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(24px);
   }
   to {
     opacity: 1;
@@ -273,7 +296,16 @@ textarea {
     opacity: 1;
   }
   50% {
-    opacity: 0.5;
+    opacity: 0.6;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(0, 102, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 102, 255, 0.6);
   }
 }
 
@@ -288,4 +320,3 @@ textarea {
 .slide-in-right {
   animation: slideInFromRight 0.6s ease-out;
 }
-
