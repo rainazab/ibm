@@ -3,15 +3,20 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
 import { OpenAI } from 'openai';
-import stripeRoutes from './stripe-routes';
-import userRoutes from './user-routes';
 
-dotenv.config();
+try {
+  dotenv.config();
+} catch (e) {
+  console.log('No .env file found, using defaults');
+}
 
-// Initialize OpenAI client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+// Initialize OpenAI client (optional - only if API key exists)
+let openai: any = null;
+if (process.env.OPENAI_API_KEY) {
+  openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY,
+  });
+}
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -275,10 +280,6 @@ app.get('/api/users/:userId/negotiations', (req: Request, res: Response) => {
     res.status(500).json({ error: 'Failed to get negotiations' });
   }
 });
-
-// Routes
-app.use('/api/stripe', stripeRoutes);
-app.use('/api/users', userRoutes);
 
 // Health check
 app.get('/health', (req: Request, res: Response) => {
