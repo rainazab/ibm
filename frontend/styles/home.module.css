@@ -109,9 +109,10 @@
 
 .btnSmall:hover {
   background: #0066FF;
-  color: white;
+  color: #FFFFFF !important;
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0, 102, 255, 0.25);
+  border-color: #0066FF;
 }
 
 .btnPrimarySmall {
