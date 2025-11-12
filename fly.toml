@@ -1,0 +1,40 @@
+# fly.toml app configuration file generated
+
+app = "beacon-app"
+primary_region = "sjc"
+
+[build]
+  builder = "paketobuildpacks"
+  buildpacks = [
+    { id = "gcr.io/buildpacks/nodejs" }
+  ]
+
+[env]
+  PORT = "3001"
+  NODE_ENV = "production"
+
+[[services]]
+  internal_port = 3001
+  processes = ["app"]
+
+  [services.http_checks]
+    enabled = true
+    uri = "/health"
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+    force_https = true
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+[mounts]
+  source = "beacon_data"
+  destination = "/data"
+
+[[statics]]
+  guest_path = "/app/public"
+  url_prefix = "/static"
+
