@@ -49,13 +49,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          {/* Animated Logo */}
-          <div className={`${styles.animatedLogo} ${logoAnimated ? styles.animated : ''}`}>
-            <span className={styles.logoParticle}>delve</span>
-            <span className={styles.splitAnimation}></span>
-            <span className={styles.logoParticle}>in</span>
-          </div>
-
           <h1 className={styles.title}>
             Get Better Deals with AI Negotiation
           </h1>
@@ -238,6 +231,17 @@ export default function Home() {
           <Link href="/signup" className={styles.btnLarge}>
             Get Started Free
           </Link>
+        </div>
+      </section>
+
+      {/* Animated Brand Section */}
+      <section className={styles.brandSection}>
+        <div className={styles.container}>
+          <div className={`${styles.animatedLogoBrand} ${logoAnimated ? styles.animated : ''}`}>
+            <span className={styles.logoParticleBrand}>delve</span>
+            <span className={styles.splitAnimationBrand}></span>
+            <span className={styles.logoParticleBrand}>in</span>
+          </div>
         </div>
       </section>
 

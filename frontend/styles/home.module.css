@@ -776,6 +776,82 @@
   box-shadow: 0 20px 48px rgba(255, 214, 10, 0.5);
 }
 
+/* ============ ANIMATED BRAND SECTION ============ */
+.brandSection {
+  padding: 5rem 2rem;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 25vh;
+}
+
+.animatedLogoBrand {
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+}
+
+.logoParticleBrand {
+  display: inline-block;
+  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.animatedLogoBrand.animated {
+  animation: delveInAnimationBrand 2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes delveInAnimationBrand {
+  0% {
+    letter-spacing: 0;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    letter-spacing: 3rem;
+  }
+  100% {
+    letter-spacing: 0.5rem;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.splitAnimationBrand {
+  display: inline-block;
+  width: 3.5px;
+  height: 110px;
+  background: linear-gradient(180deg, #0066FF 0%, #FFD60A 100%);
+  margin: 0 0.75rem;
+  animation: splitLineBrand 2s ease-out forwards;
+  opacity: 0;
+  border-radius: 2px;
+}
+
+@keyframes splitLineBrand {
+  0% {
+    opacity: 0;
+    transform: scaleY(0) rotate(180deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1) rotate(0deg);
+  }
+  100% {
+    opacity: 0.8;
+    transform: scaleY(1) rotate(0deg);
+  }
+}
+
 /* ============ FOOTER ============ */
 .footer {
   background: linear-gradient(135deg, #0A0E27 0%, #1A1F4E 100%);
@@ -902,6 +978,20 @@
   .stepsGrid, .featuresGrid, .pricingGrid {
     gap: 2rem;
   }
+
+  .brandSection {
+    padding: 4rem 2rem;
+    min-height: 22vh;
+  }
+
+  .animatedLogoBrand {
+    font-size: 3.8rem;
+    height: 95px;
+  }
+
+  .splitAnimationBrand {
+    height: 95px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -929,6 +1019,20 @@
   .btnSmall, .btnPrimarySmall {
     padding: 0.5rem 0.9rem;
     font-size: 0.8rem;
+  }
+
+  .brandSection {
+    padding: 3.5rem 1.5rem;
+    min-height: 20vh;
+  }
+
+  .animatedLogoBrand {
+    font-size: 2.5rem;
+    height: 70px;
+  }
+
+  .splitAnimationBrand {
+    height: 70px;
   }
 
   .hero {
@@ -1124,6 +1228,21 @@
   .btnSmall, .btnPrimarySmall {
     padding: 0.4rem 0.75rem;
     font-size: 0.7rem;
+  }
+
+  .brandSection {
+    padding: 2.5rem 1rem;
+    min-height: 18vh;
+  }
+
+  .animatedLogoBrand {
+    font-size: 1.8rem;
+    height: 55px;
+  }
+
+  .splitAnimationBrand {
+    height: 55px;
+    width: 2.5px;
   }
 
   .hero {
