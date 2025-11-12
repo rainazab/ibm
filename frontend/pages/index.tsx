@@ -30,7 +30,7 @@ export default function Home() {
       <nav className={`${styles.nav} ${isScrolled ? styles.navScrolled : ''}`}>
         <div className={styles.navContent}>
           <Link href="/" className={styles.navLogo}>
-            <span className={styles.logoText}>delven</span>
+            <span className={styles.logoText}>Delven</span>
           </Link>
           <div className={styles.navLinks}>
             <Link href="#how-it-works">How It Works</Link>
