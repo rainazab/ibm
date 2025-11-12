@@ -50,7 +50,7 @@ export default function Home() {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.title}>
-            Get Better Deals with AI Negotiation
+            Your Negotiation Superpower
           </h1>
           <p className={styles.subtitle}>
             Stop leaving money on the table. Our AI agent negotiates on your behalf to get you the best prices on hotels, restaurants, services, and more.
