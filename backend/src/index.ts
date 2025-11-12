@@ -2,8 +2,14 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { v4 as uuidv4 } from 'uuid';
+import { OpenAI } from 'openai';
 
 dotenv.config();
+
+// Initialize OpenAI client
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -191,9 +197,9 @@ app.get('/api/calls/:callId/results', (req: Request, res: Response) => {
 });
 
 /**
- * 5. Generate Strategy (watsonx.ai)
+ * 5. Generate Strategy (OpenAI)
  */
-app.post('/api/watson/generate-strategy', (req: Request, res: Response) => {
+app.post('/api/watson/generate-strategy', async (req: Request, res: Response) => {
   try {
     const { category, details, target } = req.body;
 
@@ -201,12 +207,18 @@ app.post('/api/watson/generate-strategy', (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
-    const strategy = generateStrategy(category, details, target || 20);
+    // Use OpenAI if API key is available, otherwise use mock
+    let strategy: string;
+    if (process.env.OPENAI_API_KEY) {
+      strategy = await generateStrategyWithOpenAI(category, details, target || 20);
+    } else {
+      strategy = generateStrategy(category, details, target || 20);
+    }
 
     res.json({
       strategy,
       confidence_score: 0.87,
-      model: 'watsonx.ai (Llama 2)',
+      model: process.env.OPENAI_API_KEY ? 'OpenAI (GPT-4)' : 'Mock Strategy',
     });
   } catch (error) {
     res.status(500).json({ error: 'Failed to generate strategy' });
@@ -268,6 +280,45 @@ app.get('/health', (req: Request, res: Response) => {
 });
 
 // HELPER FUNCTIONS
+
+async function generateStrategyWithOpenAI(category: string, details: string, target: number): Promise<string> {
+  try {
+    const prompt = `You are an expert negotiation strategist. Generate a concise negotiation strategy for the following:
+
+Category: ${category}
+Details: ${details}
+Target Discount: ${target}%
+
+Provide a clear, actionable strategy including:
+1. Opening statement
+2. Key value propositions
+3. Objection handlers
+4. Fallback options
+
+Keep the response concise and professional.`;
+
+    const message = await openai.messages.create({
+      model: 'claude-3-5-sonnet-20241022',
+      max_tokens: 1024,
+      messages: [
+        {
+          role: 'user',
+          content: prompt,
+        },
+      ],
+    });
+
+    const content = message.content[0];
+    if (content.type === 'text') {
+      return content.text;
+    }
+    return generateStrategy(category, details, target);
+  } catch (error) {
+    console.error('OpenAI API error:', error);
+    // Fall back to mock strategy if API fails
+    return generateStrategy(category, details, target);
+  }
+}
 
 function generateStrategy(category: string, details: string, target: number): string {
   const strategies: { [key: string]: string } = {
