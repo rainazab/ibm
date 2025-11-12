@@ -1,5 +1,5 @@
-/* DELVEN.APP - PREMIUM HOME PAGE STYLES */
-/* Vibrant Blue (#0066FF) & Vibrant Yellow (#FFD60A) Color Scheme */
+/* DELVEN.APP - PROFESSIONAL HIGH-END HOME PAGE STYLES */
+/* Professional Blue (#1A5FFF) & Cyan Accent (#00D4FF) Color Scheme */
 
 /* ============ NAVIGATION ============ */
 .nav {
@@ -14,9 +14,9 @@
 }
 
 .nav.navScrolled {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(30px);
-  box-shadow: 0 8px 32px rgba(0, 102, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(26, 95, 255, 0.08);
   padding: 0.5rem 0;
 }
 
@@ -33,12 +33,12 @@
   font-size: 1.75rem;
   font-weight: 900;
   letter-spacing: -0.03em;
-  color: #0066FF;
+  color: #1A5FFF;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   cursor: pointer;
   text-decoration: none;
   margin-left: -1.5rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 .navLogo:hover {
@@ -46,13 +46,13 @@
 }
 
 .logoText {
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 900;
   text-decoration: none;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 .navLinks {
@@ -62,7 +62,7 @@
 }
 
 .navLinks a {
-  color: #0A0E27;
+  color: #0F1419;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -78,13 +78,13 @@
   left: 0;
   width: 0;
   height: 2.5px;
-  background: linear-gradient(90deg, #0066FF, #FFD60A);
+  background: linear-gradient(90deg, #1A5FFF, #00D4FF);
   transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   border-radius: 2px;
 }
 
 .navLinks a:hover {
-  color: #0066FF;
+  color: #1A5FFF;
 }
 
 .navLinks a:hover::after {
@@ -93,9 +93,9 @@
 
 .btnSmall {
   padding: 0.65rem 1.25rem;
-  border: 2.5px solid #0066FF;
+  border: 2.5px solid #1A5FFF;
   border-radius: 0.75rem;
-  color: #0066FF;
+  color: #1A5FFF;
   font-weight: 700;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   font-size: 0.9rem;
@@ -108,16 +108,16 @@
 }
 
 .btnSmall:hover {
-  background: #0066FF;
+  background: #1A5FFF;
   color: #FFFFFF !important;
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0, 102, 255, 0.25);
-  border-color: #0066FF;
+  border-color: #1A5FFF;
 }
 
 .btnPrimarySmall {
   padding: 0.65rem 1.25rem;
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   color: #FFFFFF;
   border-radius: 0.75rem;
   font-weight: 700;
@@ -134,7 +134,7 @@
 }
 
 .btnPrimarySmall:hover {
-  background: linear-gradient(135deg, #3385FF 0%, #33B1FF 100%);
+  background: linear-gradient(135deg, #4D7FFF 0%, #33B1FF 100%);
   color: #FFFFFF;
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 102, 255, 0.4);
@@ -148,7 +148,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  background: linear-gradient(135deg, #F5F8FF 0%, #E8F0FF 100%);
+  background: linear-gradient(135deg, #F6F8FB 0%, #EEF4FB 100%);
   min-height: 100vh;
   padding-top: calc(5rem + 4rem);
 }
@@ -181,7 +181,7 @@
 
 .logoParticle {
   display: inline-block;
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -212,7 +212,7 @@
   display: inline-block;
   width: 3px;
   height: 90px;
-  background: linear-gradient(180deg, #0066FF 0%, #FFD60A 100%);
+  background: linear-gradient(180deg, #1A5FFF 0%, #00D4FF 100%);
   margin: 0 0.75rem;
   animation: splitLine 2s ease-out forwards;
   opacity: 0;
@@ -238,14 +238,14 @@
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1.15;
-  color: #0A0E27;
+  color: #0F1419;
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
 }
 
 .subtitle {
   font-size: 1.2rem;
-  color: #5A5F7E;
+  color: #5F6B7F;
   line-height: 1.8;
   margin-bottom: 2.5rem;
   font-weight: 500;
@@ -260,7 +260,7 @@
 
 .btnLarge {
   padding: 1.1rem 2.5rem;
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   color: white;
   border: none;
   border-radius: 1.25rem;
@@ -288,8 +288,8 @@
 .btnOutlineLarge {
   padding: 1.1rem 2.5rem;
   background: white;
-  color: #0066FF;
-  border: 2.5px solid #0066FF;
+  color: #1A5FFF;
+  border: 2.5px solid #1A5FFF;
   border-radius: 1.25rem;
   font-size: 1.05rem;
   font-weight: 700;
@@ -304,14 +304,14 @@
 }
 
 .btnOutlineLarge:hover {
-  background: #0066FF;
+  background: #1A5FFF;
   color: white;
   transform: translateY(-5px);
   box-shadow: 0 16px 40px rgba(0, 102, 255, 0.3);
 }
 
 .socialProof {
-  color: #5A5F7E;
+  color: #5F6B7F;
   font-size: 1rem;
   margin-top: 2rem;
   font-weight: 500;
@@ -369,13 +369,13 @@
 .callResult p {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #0A0E27;
+  color: #0F1419;
   margin: 0.75rem 0;
   font-family: 'Inter', sans-serif;
 }
 
 .callResult p strong {
-  background: linear-gradient(135deg, #0066FF 0%, #FFD60A 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -384,7 +384,7 @@
 
 .callResult p.small {
   font-size: 1rem;
-  color: #5A5F7E;
+  color: #5F6B7F;
   font-weight: 500;
 }
 
@@ -403,7 +403,7 @@
   font-size: 2.8rem;
   font-weight: 900;
   text-align: center;
-  color: #0A0E27;
+  color: #0F1419;
   margin-bottom: 3.5rem;
   letter-spacing: -0.02em;
   font-family: 'Inter', sans-serif;
@@ -420,7 +420,7 @@
   text-align: center;
   padding: 2.5rem;
   border-radius: 1.75rem;
-  background: #F5F8FF;
+  background: #F6F8FB;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
   border: 2px solid transparent;
   position: relative;
@@ -434,7 +434,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #0066FF, #FFD60A, #0099FF);
+  background: linear-gradient(90deg, #1A5FFF, #00D4FF, #00D4FF);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -442,7 +442,7 @@
 
 .step:hover {
   transform: translateY(-12px);
-  background: linear-gradient(135deg, #F5F8FF 0%, #E8F0FF 100%);
+  background: linear-gradient(135deg, #F6F8FB 0%, #EEF4FB 100%);
   box-shadow: 0 16px 48px rgba(0, 102, 255, 0.15);
   border-color: rgba(0, 102, 255, 0.1);
 }
@@ -457,7 +457,7 @@
   justify-content: center;
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   color: white;
   border-radius: 50%;
   font-size: 1.6rem;
@@ -469,13 +469,13 @@
 
 .step h3 {
   font-size: 1.4rem;
-  color: #0A0E27;
+  color: #0F1419;
   margin-bottom: 1rem;
   font-weight: 800;
 }
 
 .step p {
-  color: #5A5F7E;
+  color: #5F6B7F;
   font-size: 0.98rem;
   line-height: 1.7;
   font-weight: 500;
@@ -484,7 +484,7 @@
 /* ============ FEATURES ============ */
 .features {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, #F5F8FF 0%, #E8F0FF 100%);
+  background: linear-gradient(135deg, #F6F8FB 0%, #EEF4FB 100%);
 }
 
 .featuresGrid {
@@ -511,7 +511,7 @@
   left: -2px;
   right: -2px;
   bottom: -2px;
-  background: linear-gradient(135deg, #0066FF, #FFD60A, #0099FF);
+  background: linear-gradient(135deg, #1A5FFF, #00D4FF, #00D4FF);
   border-radius: 1.75rem;
   opacity: 0;
   z-index: -1;
@@ -519,7 +519,7 @@
 }
 
 .featureCard:hover {
-  border-color: #0066FF;
+  border-color: #1A5FFF;
   transform: translateY(-8px);
   box-shadow: 0 20px 48px rgba(0, 102, 255, 0.2);
 }
@@ -536,13 +536,13 @@
 
 .featureCard h3 {
   font-size: 1.35rem;
-  color: #0A0E27;
+  color: #0F1419;
   margin-bottom: 1rem;
   font-weight: 800;
 }
 
 .featureCard p {
-  color: #5A5F7E;
+  color: #5F6B7F;
   font-size: 0.98rem;
   margin-bottom: 0;
   font-weight: 500;
@@ -562,8 +562,8 @@
 }
 
 .priceCard {
-  background: #F5F8FF;
-  border: 2.5px solid #DDE4FF;
+  background: #F6F8FB;
+  border: 2.5px solid #D9E2F0;
   border-radius: 1.75rem;
   padding: 3rem;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -578,7 +578,7 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #0066FF, #FFD60A);
+  background: linear-gradient(90deg, #1A5FFF, #00D4FF);
   transform: translateX(-100%);
   transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
@@ -586,7 +586,7 @@
 .priceCard:hover {
   transform: translateY(-12px);
   box-shadow: 0 24px 56px rgba(0, 102, 255, 0.15);
-  border-color: #0066FF;
+  border-color: #1A5FFF;
 }
 
 .priceCard:hover::before {
@@ -594,9 +594,9 @@
 }
 
 .priceCardFeatured {
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   color: white;
-  border-color: #0099FF;
+  border-color: #00D4FF;
   transform: scale(1.08);
   box-shadow: 0 20px 48px rgba(0, 102, 255, 0.25);
 }
@@ -610,7 +610,7 @@
   font-size: 1.6rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
-  color: #0A0E27;
+  color: #0F1419;
   font-family: 'Inter', sans-serif;
 }
 
@@ -621,18 +621,18 @@
 .price {
   font-size: 2.8rem;
   font-weight: 900;
-  color: #0066FF;
+  color: #1A5FFF;
   margin-bottom: 0.75rem;
   font-family: 'Inter', sans-serif;
 }
 
 .priceCardFeatured .price {
-  color: #FFD60A;
+  color: #00D4FF;
 }
 
 .priceMonth {
   font-size: 1.1rem;
-  color: #5A5F7E;
+  color: #5F6B7F;
   font-weight: 600;
 }
 
@@ -647,8 +647,8 @@
 
 .priceFeatures li {
   padding: 0.9rem 0;
-  color: #5A5F7E;
-  border-bottom: 1px solid #DDE4FF;
+  color: #5F6B7F;
+  border-bottom: 1px solid #D9E2F0;
   font-weight: 500;
   font-size: 0.98rem;
 }
@@ -662,7 +662,7 @@
   display: block;
   width: 100%;
   padding: 1.1rem;
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   color: white;
   border: none;
   border-radius: 1.25rem;
@@ -689,8 +689,8 @@
   display: block;
   width: 100%;
   padding: 1.1rem;
-  background: linear-gradient(135deg, #FFD60A 0%, #FFE066 100%);
-  color: #0A0E27;
+  background: linear-gradient(135deg, #00D4FF 0%, #FFE066 100%);
+  color: #0F1419;
   border: none;
   border-radius: 1.25rem;
   font-weight: 700;
@@ -715,7 +715,7 @@
 /* ============ CTA SECTION ============ */
 .ctaSection {
   padding: 6rem 2rem;
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   text-align: center;
   color: white;
   position: relative;
@@ -765,8 +765,8 @@
 }
 
 .ctaSection .btnLarge {
-  background: linear-gradient(135deg, #FFD60A 0%, #FFE066 100%);
-  color: #0A0E27;
+  background: linear-gradient(135deg, #00D4FF 0%, #FFE066 100%);
+  color: #0F1419;
   box-shadow: 0 12px 32px rgba(255, 214, 10, 0.3);
   position: relative;
   z-index: 1;
@@ -799,7 +799,7 @@
 
 .logoParticleBrand {
   display: inline-block;
-  background: linear-gradient(135deg, #0066FF 0%, #0099FF 100%);
+  background: linear-gradient(135deg, #1A5FFF 0%, #00D4FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -830,7 +830,7 @@
   display: inline-block;
   width: 3.5px;
   height: 110px;
-  background: linear-gradient(180deg, #0066FF 0%, #FFD60A 100%);
+  background: linear-gradient(180deg, #1A5FFF 0%, #00D4FF 100%);
   margin: 0 0.75rem;
   animation: splitLineBrand 2s ease-out forwards;
   opacity: 0;
@@ -854,7 +854,7 @@
 
 /* ============ FOOTER ============ */
 .footer {
-  background: linear-gradient(135deg, #0A0E27 0%, #1A1F4E 100%);
+  background: linear-gradient(135deg, #0F1419 0%, #1A1F4E 100%);
   color: white;
   padding: 4rem 2rem 1.5rem;
 }
@@ -873,7 +873,7 @@
   font-size: 1.2rem;
   font-weight: 800;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #0066FF, #FFD60A);
+  background: linear-gradient(135deg, #1A5FFF, #00D4FF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -897,7 +897,7 @@
 }
 
 .footerSection a:hover {
-  color: #0066FF;
+  color: #1A5FFF;
   transform: translateX(6px);
 }
 
@@ -913,7 +913,7 @@
   background: rgba(0, 102, 255, 0.15);
   border: 2px solid rgba(0, 102, 255, 0.3);
   border-radius: 0.75rem;
-  color: #0099FF;
+  color: #00D4FF;
   font-size: 0.9rem;
   font-weight: 700;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -921,7 +921,7 @@
 
 .appBadge:hover {
   background: rgba(0, 102, 255, 0.25);
-  border-color: #0099FF;
+  border-color: #00D4FF;
   transform: translateX(8px);
   box-shadow: 0 8px 20px rgba(0, 102, 255, 0.2);
 }
@@ -956,7 +956,7 @@
 }
 
 .socialLinks a:hover {
-  color: #0066FF;
+  color: #1A5FFF;
   transform: translateY(-5px) scale(1.15);
 }
 

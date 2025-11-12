@@ -1,31 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-/* DELVEN.APP - PREMIUM VIBRANT COLOR SCHEME */
-/* Primary: Vibrant Blue (#0066FF), Secondary: Vibrant Yellow (#FFD60A), Accent: Electric Blue (#0099FF) */
+/* DELVEN.APP - PROFESSIONAL HIGH-END COLOR SCHEME */
+/* Primary: Professional Navy Blue (#1A5FFF), Secondary: Electric Accent (#00D4FF) */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+html, body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 :root {
-  /* Premium Color Palette - Vibrant Blue & Yellow */
-  --primary: #0066FF;
-  --primary-light: #3385FF;
-  --primary-dark: #0052CC;
-  --secondary: #FFD60A;
-  --secondary-light: #FFE066;
-  --accent: #0099FF;
-  --accent-light: #33B1FF;
-  --text-dark: #0A0E27;
-  --text-light: #5A5F7E;
-  --bg-light: #F5F8FF;
+  /* Professional High-End Color Palette */
+  --primary: #1A5FFF;
+  --primary-light: #4D7FFF;
+  --primary-dark: #0A3FCC;
+  --secondary: #00D4FF;
+  --secondary-light: #33E0FF;
+  --accent: #00B8E6;
+  --accent-light: #33D9FF;
+  --text-dark: #0F1419;
+  --text-light: #5F6B7F;
+  --text-lighter: #8B98A8;
+  --bg-light: #F6F8FB;
   --bg-white: #FFFFFF;
-  --border: #DDE4FF;
-  --success: #00D084;
-  --error: #FF3333;
-  --warning: #FFB200;
+  --border: #D9E2F0;
+  --success: #10B981;
+  --error: #EF4444;
+  --warning: #F59E0B;
   
   /* Spacing */
   --space-xs: 0.5rem;
@@ -52,10 +58,10 @@
   --radius-xl: 1.5rem;
   
   /* Shadows */
-  --shadow-sm: 0 1px 2px rgba(0, 102, 255, 0.05);
-  --shadow-md: 0 8px 16px rgba(0, 102, 255, 0.1);
-  --shadow-lg: 0 16px 32px rgba(0, 102, 255, 0.15);
-  --shadow-xl: 0 24px 48px rgba(0, 102, 255, 0.2);
+  --shadow-sm: 0 1px 2px rgba(26, 95, 255, 0.05);
+  --shadow-md: 0 8px 16px rgba(26, 95, 255, 0.08);
+  --shadow-lg: 0 16px 32px rgba(26, 95, 255, 0.12);
+  --shadow-xl: 0 24px 48px rgba(26, 95, 255, 0.15);
 }
 
 html {
@@ -63,33 +69,40 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   color: var(--text-dark);
-  background: #F5F8FF;
+  background: #F6F8FB;
   line-height: 1.6;
   letter-spacing: -0.005em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-weight: 800;
   line-height: 1.2;
   color: var(--text-dark);
 }
 
 h1 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-size: var(--font-size-3xl);
 }
 
 h2 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-size: var(--font-size-2xl);
 }
 
 h3 {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-size: var(--font-size-xl);
 }
 
 p {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   color: var(--text-light);
   margin-bottom: var(--space-md);
 }
@@ -119,7 +132,7 @@ a:hover {
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   text-decoration: none;
-  font-family: var(--font-family);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 .btn-primary {
@@ -185,7 +198,7 @@ input, textarea, select {
   padding: var(--space-sm) var(--space-md);
   border: 2px solid var(--border);
   border-radius: var(--radius-md);
-  font-family: var(--font-family);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
   font-size: var(--font-size-base);
   transition: all 0.3s ease;
   background: white;
@@ -195,13 +208,14 @@ input, textarea, select {
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(0, 102, 255, 0.1);
+  box-shadow: 0 0 0 4px rgba(26, 95, 255, 0.1);
   transform: translateY(-2px);
 }
 
 textarea {
   resize: vertical;
   min-height: 120px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 .form-group {
@@ -213,6 +227,7 @@ textarea {
   margin-bottom: var(--space-sm);
   font-weight: 700;
   color: var(--text-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 .error-message {
