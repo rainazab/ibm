@@ -1,10 +1,15 @@
-/* AUTH PAGES STYLES */
+/* AUTH PAGES STYLES - INTER FONT EVERYWHERE */
+
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
 
 .authContainer {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   background: white;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
 }
 
 .authCard {
